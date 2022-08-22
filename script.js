@@ -57,20 +57,48 @@
 // console.log(basicOp('*', 5, 2))
 
 
-var countSheep = function (num){
+// var countSheep = function (num){
+//   let str = '';
+//   let sumStr = '';
+//   let sheep = ' sheep...';
+  
+
+//   for(let i = 1; i <= num; i++) {
+//     str = i + sheep;
+//     sumStr += str;
+//   }
+  
+//   return sumStr;
+  
+// };
+
+
+// console.log(countSheep(3));
+
+// // Решения которые мне понравились
+
+// var countSheep = function (num){
+//   let str = "";
+//   for(let i = 1; i <= num; i++) { str+= `${i} sheep...`; }
+//   return str;
+// };
+
+// Задача с переводом зачений к 1 или 0
+
+function fakeBin(x){
   let str = '';
-  let sumStr = '';
-  let sheep = ' sheep...';
-  
 
-  for(let i = 1; i <= num; i++) {
-    str = i + sheep;
-    sumStr += str;
+  for(let i = 0; i < x.length; i++) {
+  if(x[i] >= 0 && x[i] < 5){
+   str += 0;
   }
-  
-  return sumStr;
-  
-};
 
+  if(x[i] >= 5) {
+    str += '1';
+  }
+}
+  return str;
 
-console.log(countSheep(3));
+}
+
+console.log(fakeBin('3219893195'));
