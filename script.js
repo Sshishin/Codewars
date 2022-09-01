@@ -148,43 +148,76 @@
 
 //Мое решение
 
-function getGrade (s1, s2, s3) {
-  const average = (s1 + s2 + s3) / 3;
-  if(average <= 100 && average >= 90) {
-    return 'A';
-  } else if (average <= 90 && average >= 80) {
-    return 'B';
-  } else if (average <= 80 && average >= 70) {
-    return 'C';
-  } else if (average <= 70 && average >= 60) {
-    return 'D';
-  } else if (average <= 60) {
-    return 'F';
+// function getGrade (s1, s2, s3) {
+//   const average = (s1 + s2 + s3) / 3;
+//   if(average <= 100 && average >= 90) {
+//     return 'A';
+//   } else if (average <= 90 && average >= 80) {
+//     return 'B';
+//   } else if (average <= 80 && average >= 70) {
+//     return 'C';
+//   } else if (average <= 70 && average >= 60) {
+//     return 'D';
+//   } else if (average <= 60) {
+//     return 'F';
+//   }
+// }
+// console.log(getGrade (100, 39, 89));
+
+
+// // Решение которое мне порнравилось
+
+// function getGrade (s1, s2, s3) {
+//   var s = (s1 + s2 + s3) / 3;
+//   return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
+// }
+
+// // Переворот строки
+// // Самостоятельное решение
+
+// function reverseWords(str) {
+//   const splitString = str.split(' ');
+//   let sumString = '';
+
+//   for(let i = 0; i <= splitString.length - 1; i++) {
+//       sumString += splitString[i].split('').reverse().join('');
+//   }
+//   return sumString;
+// }
+
+
+// Regex validate PIN code
+
+
+// function validatePIN (pin) {
+//   pin = pin.replace(/\s+/g);
+//   const item = pin.split('');
+//   let total = '';
+
+//   for(let i = 0; i <= item.length - 1; i++) {
+//     if(!isNaN(item[i])) {
+//       total += item[i];
+//     }
+// }
+// console.log(total);
+//   if (total.length === 4 || total.length == 6) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+  
+// }
+// console.log(validatePIN ('1234'));
+
+// Возврат строки в зависимости от того владелец зашел или кто-то другой
+//Самостоятельное решение
+
+function greet (name, owner) {
+  if(name == owner) {
+    return 'Hello boss';
+  } else {
+    return 'Hello guest';
   }
 }
-console.log(getGrade (100, 39, 89));
 
-
-// Решение которое мне порнравилось
-
-function getGrade (s1, s2, s3) {
-  var s = (s1 + s2 + s3) / 3;
-  return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
-}
-
-// Переворот строки
-// Самостоятельное решение
-
-function reverseWords(str) {
-  const splitString = str.split(' ');
-  let sumString = '';
-
-  for(let i = 0; i <= splitString.length - 1; i++) {
-    if(i == splitString.length - 1) {
-      sumString += splitString[i].split('').reverse().join('');
-    } else {
-      sumString += splitString[i].split('').reverse().join('') + ' ';
-    }
-  }
-  return sumString;
-}
+greet ('Johnn', 'John');
