@@ -212,12 +212,46 @@
 // Возврат строки в зависимости от того владелец зашел или кто-то другой
 //Самостоятельное решение
 
-function greet (name, owner) {
-  if(name == owner) {
-    return 'Hello boss';
+// function greet (name, owner) {
+//   if(name == owner) {
+//     return 'Hello boss';
+//   } else {
+//     return 'Hello guest';
+//   }
+// }
+
+// greet ('Johnn', 'John');
+
+
+//Самостоятельное решение
+
+// function areYouPlayingBanjo(name) {
+//   let str = name.split('');
+//   str.forEach((item) => {
+//     if(item == 'R' || item == 'r') {
+//       console.log('right');
+//       let y = str.join('');
+//       console.log(y)
+//       return y + 'Yes';
+      
+//     } else {
+//       console.log('lose');
+//     }
+//   });
+//   console.log(str)
+//   return name + 'Yes';
+// }
+
+// areYouPlayingBanjo('Ruby');
+
+function areYouPlayingBanjo(name) {
+  let firstWord = name.split('');
+  if(firstWord[0] == 'R' || firstWord[0] == 'r') {
+    name = name + ' plays banjo';
+    return name;
   } else {
-    return 'Hello guest';
+    name = name + ' does not play banjo';
+    return name;
   }
 }
-
-greet ('Johnn', 'John');
+console.log(areYouPlayingBanjo('Rube'));
