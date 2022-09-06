@@ -244,14 +244,44 @@
 
 // areYouPlayingBanjo('Ruby');
 
-function areYouPlayingBanjo(name) {
-  let firstWord = name.split('');
-  if(firstWord[0] == 'R' || firstWord[0] == 'r') {
-    name = name + ' plays banjo';
-    return name;
-  } else {
-    name = name + ' does not play banjo';
-    return name;
-  }
+// function areYouPlayingBanjo(name) {
+//   let firstWord = name.split('');
+//   if(firstWord[0] == 'R' || firstWord[0] == 'r') {
+//     name = name + ' plays banjo';
+//     return name;
+//   } else {
+//     name = name + ' does not play banjo';
+//     return name;
+//   }
+// }
+// console.log(areYouPlayingBanjo('Rube'));
+
+// // Объем прямоугольного параллелипипеда 
+
+// class Kata {
+//   static getVolumeOfCuboid(length, width, height) {
+//     return length * width * height;
+//   }
+// }
+
+function bmi(weight, height) {
+const y = weight / (height * height);
+if(y <= 18.5) {
+  return "Underweight";
+} else if (y <= 25) {
+  return "Normal";
+} else if (y <= 30) {
+  return "Overweight";
+} else {
+  return "Obese";
 }
-console.log(areYouPlayingBanjo('Rube'));
+}
+
+console.log(bmi(100, 1.70));
+
+
+function bmi(weight, height) {
+  const bmiTotal = weight / (height * height);
+  return bmiTotal <= 18.5? "Underweight" : bmiTotal <= 25? "Normal" : bmiTotal <= 30? "Overweight":"Obese";
+}
+  console.log(bmi(100, 1.70));
