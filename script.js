@@ -264,24 +264,38 @@
 //   }
 // }
 
-function bmi(weight, height) {
-const y = weight / (height * height);
-if(y <= 18.5) {
-  return "Underweight";
-} else if (y <= 25) {
-  return "Normal";
-} else if (y <= 30) {
-  return "Overweight";
-} else {
-  return "Obese";
-}
-}
+// Самостоятельные решения 
 
-console.log(bmi(100, 1.70));
+// function bmi(weight, height) {
+// const y = weight / (height * height);
+// if(y <= 18.5) {
+//   return "Underweight";
+// } else if (y <= 25) {
+//   return "Normal";
+// } else if (y <= 30) {
+//   return "Overweight";
+// } else {
+//   return "Obese";
+// }
+// }
+
+// console.log(bmi(100, 1.70));
 
 
-function bmi(weight, height) {
-  const bmiTotal = weight / (height * height);
-  return bmiTotal <= 18.5? "Underweight" : bmiTotal <= 25? "Normal" : bmiTotal <= 30? "Overweight":"Obese";
-}
-  console.log(bmi(100, 1.70));
+// function bmi(weight, height) {
+//   const bmiTotal = weight / (height * height);
+//   return bmiTotal <= 18.5? "Underweight" : bmiTotal <= 25? "Normal" : bmiTotal <= 30? "Overweight":"Obese";
+// }
+//   console.log(bmi(100, 1.70));
+
+
+// Самостоятельные решения по округлению
+
+  // function litres(time) {
+  //   return Math.floor(time * 0.5);
+  // }
+
+  // console.log(litres(11.8));
+
+
+  const litres = (t, w = 0.5) => Math.floor(t * w);
