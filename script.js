@@ -298,4 +298,7 @@
   // console.log(litres(11.8));
 
 
-  const litres = (t, w = 0.5) => Math.floor(t * w);
+  // const litres = (t, w = 0.5) => Math.floor(t * w);
+
+
+  const hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"; 
