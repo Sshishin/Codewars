@@ -302,3 +302,14 @@
 
 
   const hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"; 
+
+// Самостоятельное решение
+// Возврат массива
+
+  function between(a, b) {
+    const arr = [];
+    for(let i = a; i <= b; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
