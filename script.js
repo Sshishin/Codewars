@@ -301,15 +301,59 @@
   // const litres = (t, w = 0.5) => Math.floor(t * w);
 
 
-  const hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"; 
+//   const hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"; 
+
+// // Самостоятельное решение
+// // Возврат массива где нужно вернуть массив с заполненным промежутком между переменной a и b
+
+//   function between(a, b) {
+//     const arr = [];
+//     for(let i = a; i <= b; i++) {
+//       arr.push(i);
+//     }
+//     return arr;
+//   }
+
 
 // Самостоятельное решение
-// Возврат массива
+// Непростая задача по массивам где нужно вернуть массив  количством положительных числе и суммой отрицательных чисел
 
-  function between(a, b) {
-    const arr = [];
-    for(let i = a; i <= b; i++) {
-      arr.push(i);
-    }
-    return arr;
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+  const arr2 = [0, 0];
+  const arr3 = [-46];
+
+  function countPositivesSumNegatives(input) {
+
+  let newNegativeArr = [];
+  const newArr = [];
+  const returnArr = [];
+  let sumNegative = 0;
+
+  if(input != null || input != undefined) {
+    input.forEach((digit) => {
+      if(digit < 0) {
+        newNegativeArr.push(digit);
+      } 
+      if(digit > 0) {
+        newArr.push(digit);
+      }
+    });
   }
+ 
+  newNegativeArr.forEach((item) => {
+    sumNegative += item;
+  });
+  
+  const length = newArr.length;
+  const lengthNegative = newNegativeArr.length;
+
+  if(lengthNegative == 0 && length == 0) {
+    return [];
+  }
+
+  returnArr.push(length, sumNegative);
+
+  return returnArr;
+}
+
+console.log(countPositivesSumNegatives(arr3));
