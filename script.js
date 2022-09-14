@@ -318,42 +318,130 @@
 // Самостоятельное решение
 // Непростая задача по массивам где нужно вернуть массив  количством положительных числе и суммой отрицательных чисел
 
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
-  const arr2 = [0, 0];
-  const arr3 = [-46];
+//   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+//   const arr2 = [0, 0];
+//   const arr3 = [-46];
 
-  function countPositivesSumNegatives(input) {
+//   function countPositivesSumNegatives(input) {
 
-  let newNegativeArr = [];
-  const newArr = [];
-  const returnArr = [];
-  let sumNegative = 0;
+//   let newNegativeArr = [];
+//   const newArr = [];
+//   const returnArr = [];
+//   let sumNegative = 0;
 
-  if(input != null || input != undefined) {
-    input.forEach((digit) => {
-      if(digit < 0) {
-        newNegativeArr.push(digit);
-      } 
-      if(digit > 0) {
-        newArr.push(digit);
-      }
-    });
-  }
+//   if(input != null || input != undefined) {
+//     input.forEach((digit) => {
+//       if(digit < 0) {
+//         newNegativeArr.push(digit);
+//       } 
+//       if(digit > 0) {
+//         newArr.push(digit);
+//       }
+//     });
+//   }
  
-  newNegativeArr.forEach((item) => {
-    sumNegative += item;
-  });
+//   newNegativeArr.forEach((item) => {
+//     sumNegative += item;
+//   });
   
-  const length = newArr.length;
-  const lengthNegative = newNegativeArr.length;
+//   const length = newArr.length;
+//   const lengthNegative = newNegativeArr.length;
 
-  if(lengthNegative == 0 && length == 0) {
-    return [];
+//   if(lengthNegative == 0 && length == 0) {
+//     return [];
+//   }
+
+//   returnArr.push(length, sumNegative);
+
+//   return returnArr;
+// }
+
+// console.log(countPositivesSumNegatives(arr3));
+
+
+// Самостоятельное решение
+// Нужно определить вместятся ли пассажиры в автобус
+
+// function enough(cap, on, wait) {
+//   const countPassangers = on + wait;
+
+//   if(countPassangers > cap) {
+//     return countPassangers - cap;
+//   }
+   
+//   else if(countPassangers < cap) {
+//     return 0;
+//   }
+  
+//   else {
+//     return 0;
+//   }
+// }
+
+// console.log(enough(50, 25, 29));
+
+
+// Самостоятельное решение
+// Нужно определить квартал по переданному месяцу
+
+
+// const quarterOf = (month) => {
+//   if(month <= 3) {
+//     return 1;
+//   } else if(month <= 6) {
+//     return 2;
+//   } else if(month <= 9) {
+//     return 3;
+//   } else if(month <= 12) {
+//     return 4;
+//   }
+// };
+
+// console.log(quarterOf(4));
+
+
+// Самостоятельное решение
+// Нужно вернуть сумму 2-ух наименьших значений массива
+
+// const arr = [19, 5, 42, 2, 77];
+
+// function sumTwoSmallestNumbers(numbers) {  
+//   numbers.sort(function(a,b){ 
+//     return a - b;
+//   });
+//   return numbers[0] + numbers[1];
+// }
+
+// sumTwoSmallestNumbers(arr)
+
+
+// Самостоятельное решение
+// Нужно передать человеческий возвраст и вернуть массив с возрастом кошки и собаки
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = 0;
+  let dogYears = 0;
+
+  if(humanYears == 1) {
+    catYears = 15;
+    dogYears = 15;
+  } else if(humanYears == 2) {
+    catYears = 24;
+    dogYears = 24;
+  } else if(humanYears == 3) {
+    catYears = 28;
+    dogYears = 29;
+  } else if(humanYears > 3) {
+    catYears = 28;
+    dogYears = 29;
+
+    for(let i = 1; i <= humanYears - 3; i++) {
+      catYears += 4;
+      dogYears += 5;
+    }
   }
 
-  returnArr.push(length, sumNegative);
+ return [humanYears,catYears,dogYears];
+};
 
-  return returnArr;
-}
-
-console.log(countPositivesSumNegatives(arr3));
+console.log(humanYearsCatYearsDogYears(10));
