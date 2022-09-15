@@ -418,30 +418,66 @@
 // Самостоятельное решение
 // Нужно передать человеческий возвраст и вернуть массив с возрастом кошки и собаки
 
-var humanYearsCatYearsDogYears = function(humanYears) {
-  let catYears = 0;
-  let dogYears = 0;
+// var humanYearsCatYearsDogYears = function(humanYears) {
+//   let catYears = 0;
+//   let dogYears = 0;
 
-  if(humanYears == 1) {
-    catYears = 15;
-    dogYears = 15;
-  } else if(humanYears == 2) {
-    catYears = 24;
-    dogYears = 24;
-  } else if(humanYears == 3) {
-    catYears = 28;
-    dogYears = 29;
-  } else if(humanYears > 3) {
-    catYears = 28;
-    dogYears = 29;
+//   if(humanYears == 1) {
+//     catYears = 15;
+//     dogYears = 15;
+//   } else if(humanYears == 2) {
+//     catYears = 24;
+//     dogYears = 24;
+//   } else if(humanYears == 3) {
+//     catYears = 28;
+//     dogYears = 29;
+//   } else if(humanYears > 3) {
+//     catYears = 28;
+//     dogYears = 29;
 
-    for(let i = 1; i <= humanYears - 3; i++) {
-      catYears += 4;
-      dogYears += 5;
-    }
-  }
+//     for(let i = 1; i <= humanYears - 3; i++) {
+//       catYears += 4;
+//       dogYears += 5;
+//     }
+//   }
 
- return [humanYears,catYears,dogYears];
-};
+//  return [humanYears,catYears,dogYears];
+// };
 
-console.log(humanYearsCatYearsDogYears(10));
+// console.log(humanYearsCatYearsDogYears(10));
+
+
+// Самостоятельное решение
+// Нужно сложить все числа массива
+
+// const arr = [1, 5.2, 4, 0, -1];
+
+// function sum (numbers) {
+//   "use strict";
+//   let summ = 0;
+//   numbers.forEach((item) => {
+//     summ += item;
+//   });
+//   return summ;
+// }
+
+// console.log(sum (arr));
+
+
+
+// Самостоятельное решение
+// Нужно определить четная или нечетная сумма массива
+
+const arr = [0, -1, -4];
+
+function oddOrEven(array) {
+  let sum = 0;
+
+  array.forEach(item => {
+    sum += item;
+  });
+
+  return sum % 2 == 0 ? 'even' : 'odd';
+}
+
+console.log(oddOrEven(arr));
