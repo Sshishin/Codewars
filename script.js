@@ -465,19 +465,60 @@
 
 
 
+// // Самостоятельное решение
+// // Нужно определить четная или нечетная сумма массива
+
+// const arr = [0, -1, -4];
+
+// function oddOrEven(array) {
+//   let sum = 0;
+
+//   array.forEach(item => {
+//     sum += item;
+//   });
+
+//   return sum % 2 == 0 ? 'even' : 'odd';
+// }
+
+// console.log(oddOrEven(arr));
+
+
 // Самостоятельное решение
-// Нужно определить четная или нечетная сумма массива
+// Сортировка числа по убыванию и возврат в числово формате
 
-const arr = [0, -1, -4];
+// let num = 42453;
 
-function oddOrEven(array) {
-  let sum = 0;
+// function descendingOrder(n){
+//   const arrSort = String(n).split('');
+//   arrSort.sort((a, b) => b - a);
+//   const createStr = arrSort.join('');
+//   const result = +createStr;
+//   return result;
+// }
 
-  array.forEach(item => {
-    sum += item;
-  });
+// console.log(descendingOrder(num));
 
-  return sum % 2 == 0 ? 'even' : 'odd';
-}
+// Вернуть минимальное и максимальное значение 
 
-console.log(oddOrEven(arr));
+// let input = "1 2 3 4 5";
+
+// function highAndLow(numbers){
+//   const arr = [];
+//   numbers.split(' ').forEach(item => arr.push(+item));
+//   return Math.max.apply(null, arr) + ' ' + Math.min.apply(null, arr);
+// }
+
+// console.log(highAndLow(input))
+
+
+// Вернуть количество голов из нескольких лиг
+
+const goals = (laLigaGoals, copaDelReyGoals, championsLeagueGoals) => laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+
+// Умножить на одно или другое число в зависимости от четной или не четной переменной 
+
+const simpleMultiplication = number => number % 2 == 0 ? number * 8 : number * 9;
+
+// Вернуть строку с удаленными крайними символами
+
+const removeChar = str => str.slice(1, -1);
