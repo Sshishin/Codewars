@@ -513,12 +513,92 @@
 
 // Вернуть количество голов из нескольких лиг
 
-const goals = (laLigaGoals, copaDelReyGoals, championsLeagueGoals) => laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+// const goals = (laLigaGoals, copaDelReyGoals, championsLeagueGoals) => laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 
-// Умножить на одно или другое число в зависимости от четной или не четной переменной 
+// // Умножить на одно или другое число в зависимости от четной или не четной переменной 
 
-const simpleMultiplication = number => number % 2 == 0 ? number * 8 : number * 9;
+// const simpleMultiplication = number => number % 2 == 0 ? number * 8 : number * 9;
 
-// Вернуть строку с удаленными крайними символами
+// // Вернуть строку с удаленными крайними символами
 
-const removeChar = str => str.slice(1, -1);
+// const removeChar = str => str.slice(1, -1);
+
+
+
+// Самостоятельное решение (Digits explosion)
+// Готово (Запушить на RS) ******************************************
+
+// let str = '123';
+
+// function explode(s) {
+// let total = '';
+// let arr = [];
+
+// for(let i = 0; i < str.length; i++) {
+//   arr.push(str[i]);
+// }
+//   arr.forEach(item => {
+//     for(let i = 1; i <= item; i++) {
+//       total += item;
+//     }
+//   });
+//   return total;
+// }
+
+// console.log(explode(str));
+
+
+// НЕ СДЕЛАНО !!!  ********************************
+
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//   if(enteredCode === correctCode && Date.month(currentDate) <= Date.month(expirationDate)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(checkCoupon("123", "123", "July 9, 2015", "June 9, 2015"));
+
+
+// Самостоятельное решение (My Language Skills)
+// Готово (Запушить на RS) ******************************************
+
+let obj = {"Java": 10, "Ruby": 80, "Python": 65}
+
+function myLanguages(results) {
+  let arr = [];
+  for(let key in results) {
+    if(results[key] >= 60) {
+      arr.push(key);
+    }
+  }
+  return arr.sort();
+}
+
+console.log(myLanguages(obj)); 
+
+
+
+
+// Самостоятельное решение (N-й Фибоначчи)
+// Готово (Запушить на RS) ******************************************
+
+// function nthFibo(n) {
+//   const arr = [0,1];
+//   let count = 0;
+
+// for(let i = 0; i < n; i++) {
+//   let y = arr[i] + arr[i + 1];
+//   arr.push(y);
+// }
+
+// for(let key in arr) {
+//   ++count;
+//     if(count == n) {
+//       return arr[key];
+//     }
+//   }
+// }
+
+// console.log(nthFibo(6));
