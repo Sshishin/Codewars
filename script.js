@@ -564,19 +564,19 @@
 // Самостоятельное решение (My Language Skills)
 // Готово (Запушить на RS) ******************************************
 
-let obj = {"Java": 10, "Ruby": 80, "Python": 65}
+// let obj = {"Java": 10, "Ruby": 80, "Python": 65}
 
-function myLanguages(results) {
-  let arr = [];
-  for(let key in results) {
-    if(results[key] >= 60) {
-      arr.push(key);
-    }
-  }
-  return arr.sort();
-}
+// function myLanguages(results) {
+//   let arr = [];
+//   for(let key in results) {
+//     if(results[key] >= 60) {
+//       arr.push(key);
+//     }
+//   }
+//   return arr.sort();
+// }
 
-console.log(myLanguages(obj)); 
+// console.log(myLanguages(obj)); 
 
 
 
@@ -602,3 +602,6 @@ console.log(myLanguages(obj));
 // }
 
 // console.log(nthFibo(6));
+
+
+const boolToWord = bool => bool ? 'Yes' : 'No';
