@@ -604,4 +604,13 @@
 // console.log(nthFibo(6));
 
 
-const boolToWord = bool => bool ? 'Yes' : 'No';
+// const boolToWord = bool => bool ? 'Yes' : 'No';
+
+// Возврат наименьшего значения массива
+
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+        // const arr2 = arr.sort((a, b) => b - a);
+        // return arr2.pop(); 
+//   }
+// }
