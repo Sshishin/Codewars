@@ -614,3 +614,10 @@
         // return arr2.pop(); 
 //   }
 // }
+
+
+// Если одно число четное а другое нечетное то true, иначе false
+
+const lovefunc = (flower1, flower2) => flower1 % 2 == 0 && flower2 % 2 != 0 || flower2 % 2 == 0 && flower1 % 2 != 0 ? true : false 
+
+console.log(lovefunc (1,2));
