@@ -624,4 +624,28 @@
 
 // Похожая на предыдущую задача
 
-const setAlarm = (employed, vacation) => employed == true && vacation == false ? true : false
+// const setAlarm = (employed, vacation) => employed == true && vacation == false ? true : false
+
+
+// Вернуть самое короткое слова из строки
+// НЕ РЕШЕНО
+
+const message = "Ripple DarkCoin LiteCoin Monero Monero 21inc MadeSafeCoin Dogecoin Ethereum Ripple 21inc Lisk Dogecoin Waves Bitcoin Lisk";
+let arr = [];
+let minCount = 1000;
+let wordFromArr;
+
+function findShort(s){
+arr = s.split(' ');
+
+for(let i = 0; i < arr.length; i++) {
+   wordFromArr = arr[i];
+  if(wordFromArr.length < minCount) {
+    minCount = wordFromArr.length;
+  }
+}
+
+return minCount;
+}
+
+console.log(findShort(message))
