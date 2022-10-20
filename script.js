@@ -630,22 +630,41 @@
 // Вернуть самое короткое слова из строки
 // НЕ РЕШЕНО
 
-const message = "Ripple DarkCoin LiteCoin Monero Monero 21inc MadeSafeCoin Dogecoin Ethereum Ripple 21inc Lisk Dogecoin Waves Bitcoin Lisk";
+// const message = "Ripple DarkCoin LiteCoin Monero Monero 21inc MadeSafeCoin Dogecoin Ethereum Ripple 21inc Lisk Dogecoin Waves Bitcoin Lisk";
+// let arr = [];
+// let minCount = 1000;
+// let wordFromArr;
+
+// function findShort(s){
+// arr = s.split(' ');
+
+// for(let i = 0; i < arr.length; i++) {
+//    wordFromArr = arr[i];
+//   if(wordFromArr.length < minCount) {
+//     minCount = wordFromArr.length;
+//   }
+// }
+
+// return minCount;
+// }
+
+// console.log(findShort(message))
+
+// По прежнему не решено
+
+const message = "Let's travel abroad shall we";
 let arr = [];
-let minCount = 1000;
-let wordFromArr;
 
 function findShort(s){
-arr = s.split(' ');
+const r = s.split(' ');
 
-for(let i = 0; i < arr.length; i++) {
-   wordFromArr = arr[i];
-  if(wordFromArr.length < minCount) {
-    minCount = wordFromArr.length;
-  }
+for(let i = 0; i < r.length; i++) {
+const word = r[i];
+arr.push(word.length)
 }
 
-return minCount;
+arr.sort((a, b) => a - b);
+return arr[0];
 }
 
 console.log(findShort(message))
