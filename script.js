@@ -650,21 +650,23 @@
 
 // console.log(findShort(message))
 
-// По прежнему не решено
+// РЕШЕНО
+// Проблема в тестах была из-за области видимости и переменные должны быть в локальной области видимости
 
 const message = "Let's travel abroad shall we";
-let arr = [];
+
 
 function findShort(s){
+let arr = [];
 const r = s.split(' ');
 
 for(let i = 0; i < r.length; i++) {
 const word = r[i];
-arr.push(word.length)
+arr.push(word.length);
 }
 
 arr.sort((a, b) => a - b);
 return arr[0];
 }
 
-console.log(findShort(message))
+console.log(findShort(message));
