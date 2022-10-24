@@ -653,20 +653,97 @@
 // РЕШЕНО
 // Проблема в тестах была из-за области видимости и переменные должны быть в локальной области видимости
 
-const message = "Let's travel abroad shall we";
+// const message = "Let's travel abroad shall we";
 
 
-function findShort(s){
-let arr = [];
-const r = s.split(' ');
+// function findShort(s){
+// let arr = [];
+// const r = s.split(' ');
 
-for(let i = 0; i < r.length; i++) {
-const word = r[i];
-arr.push(word.length);
+// for(let i = 0; i < r.length; i++) {
+// const word = r[i];
+// arr.push(word.length);
+// }
+
+// arr.sort((a, b) => a - b);
+// return arr[0];
+// }
+
+// console.log(findShort(message));
+
+
+// Array.diff
+// НЕ решено
+
+// const arr1 = [1, 2, 2, 3];
+// const arr2 = [1, 2];
+
+
+// function arrayDiff(a, b) {
+//   const arr3 = [];
+//   let i = 0;
+  
+//   if(a.length > 0 && b.length > 0) {
+//     a.forEach(item1 => {
+//       console.log(i);
+//       b.forEach(item2 => {
+//         if(item1 != item2) {
+//           arr3.push(item1);
+//           console.log(arr3)
+//         }
+//       });
+//     });
+//     return arr3;
+//   } else {
+//     return a;
+//   }
+//   }
+  
+// console.log(arrayDiff(arr1, arr2));
+
+
+// const arr1 = [1, 2, 2, 3];
+// const arr2 = [1, 2];
+
+
+// function arrayDiff(a, b) {
+//   const arr3 = [];
+//   let i = 0;
+  
+//   if(a.length > 0 && b.length > 0) {
+//     a.forEach(item1 => {
+//       i++;
+//       b.forEach(item2 => {
+//         if(item1 == item2) {
+//           const y = a.slice(i, i + 1);
+//           console.log(y)
+//           arr3.push(y)
+//         }
+//       });
+//     });
+//     return arr3;
+//   } else {
+//     return 33;
+//   }
+//   }
+  
+// console.log(arrayDiff(arr1, arr2));
+
+
+const arr1 = [1, 2, 2, 3];
+const arr2 = [1, 2];
+
+function arrayDiff(a, b) {
+const arr3 = [];
+  for(let i = 0; i <= arr1.length; i++) {
+    for(let k = 0; k < 1; k++) {
+      if(arr1[i] != arr2[k]) {
+        arr3.push(arr1[i])
+        console.log(arr3)
+      }
+    }
+  }
+
 }
 
-arr.sort((a, b) => a - b);
-return arr[0];
-}
-
-console.log(findShort(message));
+console.log(arrayDiff(arr1, arr2));
