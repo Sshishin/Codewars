@@ -674,6 +674,7 @@
 
 // Array.diff
 // НЕ решено
+// Решать через filter || map || RegEx
 
 // const arr1 = [1, 2, 2, 3];
 // const arr2 = [1, 2];
@@ -730,20 +731,64 @@
 // console.log(arrayDiff(arr1, arr2));
 
 
-const arr1 = [1, 2, 2, 3];
-const arr2 = [1, 2];
+// const arr1 = [1, 2, 2, 3];
+// const arr2 = [1, 2];
 
-function arrayDiff(a, b) {
-const arr3 = [];
-  for(let i = 0; i <= arr1.length; i++) {
-    for(let k = 0; k < 1; k++) {
-      if(arr1[i] != arr2[k]) {
-        arr3.push(arr1[i])
-        console.log(arr3)
-      }
-    }
-  }
+// function arrayDiff(a, b) {
+// const arr3 = [];
+//  xxx: for(let i = 0; i <= arr1.length; i++) {
+//     for(let k = 0; k < arr2.length; k++) {
+//       if(arr1[i] == arr2[k]) {
+//         continue xxx;
+//       } else {
+//         arr3.push(arr1[i]);
+//       }
+//     }
+//   }
+// return arr3
+// }
 
-}
+// console.log(arrayDiff(arr1, arr2));
 
-console.log(arrayDiff(arr1, arr2));
+
+
+// Более правильные решения
+
+// const arr1 = [1, 2];
+// const arr2 = [1];
+
+// const arr = arr1.filter(item => {
+//   return arr2.indexOf(item) < 0;   //Вернуть в новый массив если функция не нашла совпадений во втором массиве
+// });
+
+// console.log(arr);
+
+
+// const arr1 = [1, 2];
+// const arr2 = [1];
+
+// const arr = arr1.filter(item => {
+//   return !arr2.includes(item);    //Вернуть в новый массив если не включает айтем
+// });
+
+// console.log(arr);
+
+
+// Решение которое мне понравилось 
+
+// function array_diff(a, b) {
+
+//   var arr = new Array();
+  
+//   for(var i = 0;i<a.length;i++){
+//       if(b.indexOf(a[i])<0){
+//           arr.push(a[i]);
+//       }
+//   }
+
+//   return arr;
+// }
+
+
+
+// ПОСМОТРЕТЬ И ПОПРОБОВАТЬ БЕСТ ПРАКТИСЫ ПО ПОСЛЕДНЕЙ ЗАДАЧЕ
