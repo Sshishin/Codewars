@@ -672,87 +672,16 @@
 // console.log(findShort(message));
 
 
+
+
+
+
+
+
+
 // Array.diff
-// НЕ решено
-// Решать через filter || map || RegEx
+// РЕШЕНО
 
-// const arr1 = [1, 2, 2, 3];
-// const arr2 = [1, 2];
-
-
-// function arrayDiff(a, b) {
-//   const arr3 = [];
-//   let i = 0;
-  
-//   if(a.length > 0 && b.length > 0) {
-//     a.forEach(item1 => {
-//       console.log(i);
-//       b.forEach(item2 => {
-//         if(item1 != item2) {
-//           arr3.push(item1);
-//           console.log(arr3)
-//         }
-//       });
-//     });
-//     return arr3;
-//   } else {
-//     return a;
-//   }
-//   }
-  
-// console.log(arrayDiff(arr1, arr2));
-
-
-// const arr1 = [1, 2, 2, 3];
-// const arr2 = [1, 2];
-
-
-// function arrayDiff(a, b) {
-//   const arr3 = [];
-//   let i = 0;
-  
-//   if(a.length > 0 && b.length > 0) {
-//     a.forEach(item1 => {
-//       i++;
-//       b.forEach(item2 => {
-//         if(item1 == item2) {
-//           const y = a.slice(i, i + 1);
-//           console.log(y)
-//           arr3.push(y)
-//         }
-//       });
-//     });
-//     return arr3;
-//   } else {
-//     return 33;
-//   }
-//   }
-  
-// console.log(arrayDiff(arr1, arr2));
-
-
-// const arr1 = [1, 2, 2, 3];
-// const arr2 = [1, 2];
-
-// function arrayDiff(a, b) {
-// const arr3 = [];
-//  xxx: for(let i = 0; i <= arr1.length; i++) {
-//     for(let k = 0; k < arr2.length; k++) {
-//       if(arr1[i] == arr2[k]) {
-//         continue xxx;
-//       } else {
-//         arr3.push(arr1[i]);
-//       }
-//     }
-//   }
-// return arr3
-// }
-
-// console.log(arrayDiff(arr1, arr2));
-
-
-
-// Более правильные решения
 
 // const arr1 = [1, 2];
 // const arr2 = [1];
@@ -790,5 +719,26 @@
 // }
 
 
+//Собственное решение которое немного не додумал до результата 
 
-// ПОСМОТРЕТЬ И ПОПРОБОВАТЬ БЕСТ ПРАКТИСЫ ПО ПОСЛЕДНЕЙ ЗАДАЧЕ
+const arr1 = [1, 2, 2, 3];
+const arr2 = [1, 3];
+
+function arrayDiff(a, b) {
+
+  for(let i = 0; i < arr1.length; i++) {
+    for(let k = 0; k < arr2.length; k++) {
+      if(a[i] == b[k]) {
+        a.splice(i, 1);   //Удаляем 1 элемент после элемента под индексом i   //Так как мы каждый раз проверяем нулевой элемент то и рамки для удаления задаем для нулеового (1-ого) элемента
+        i--;    //Так как каждый раз мы вырезаем из массива элемент, то нам для того чтобы не пропускать элемент нужно снова начать перебор с первого элемента
+        
+      }
+    }
+  }
+return a; 
+}
+
+console.log(arrayDiff(arr1, arr2));
+
+
+
