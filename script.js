@@ -721,24 +721,53 @@
 
 //Собственное решение которое немного не додумал до результата 
 
-const arr1 = [1, 2, 2, 3];
-const arr2 = [1, 3];
+// const arr1 = [1, 2, 2, 3];
+// const arr2 = [1, 3];
 
-function arrayDiff(a, b) {
+// function arrayDiff(a, b) {
 
-  for(let i = 0; i < arr1.length; i++) {
-    for(let k = 0; k < arr2.length; k++) {
-      if(a[i] == b[k]) {
-        a.splice(i, 1);   //Удаляем 1 элемент после элемента под индексом i   //Так как мы каждый раз проверяем нулевой элемент то и рамки для удаления задаем для нулеового (1-ого) элемента
-        i--;    //Так как каждый раз мы вырезаем из массива элемент, то нам для того чтобы не пропускать элемент нужно снова начать перебор с первого элемента
+//   for(let i = 0; i < arr1.length; i++) {
+//     for(let k = 0; k < arr2.length; k++) {
+//       if(a[i] == b[k]) {
+//         a.splice(i, 1);   //Удаляем 1 элемент после элемента под индексом i   //Так как мы каждый раз проверяем нулевой элемент то и рамки для удаления задаем для нулеового (1-ого) элемента
+//         i--;    //Так как каждый раз мы вырезаем из массива элемент, то нам для того чтобы не пропускать элемент нужно снова начать перебор с первого элемента
         
-      }
-    }
+//       }
+//     }
+//   }
+// return a; 
+// }
+
+// console.log(arrayDiff(arr1, arr2));
+
+
+// Who likes it?
+// Решено
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+const arr = ["Alex", "Jacob", "Mark", "Max"]   ;
+
+function likes(names) {
+const oth = names.length - 2;
+
+  if(names.length == 0) {
+    return "no one likes this";
+  } else if(names.length == 1) {
+    return names[0] + " likes this";
+  } else if(names.length == 2) {
+    return names[0] + " and " + names[1] + " like this";
+  } else if (names.length == 3) {
+    return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+  } else if (names.length >= 4) {
+    return names[0] + ", " + names[1] + " and " + oth + " others like this";
   }
-return a; 
 }
 
-console.log(arrayDiff(arr1, arr2));
+console.log(likes(arr));
 
-
-
+// Преобразовать в формате switch(x)
