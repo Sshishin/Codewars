@@ -753,7 +753,6 @@
 const arr = ["Alex", "Jacob", "Mark", "Max"]   ;
 
 function likes(names) {
-const oth = names.length - 2;
 
   if(names.length == 0) {
     return "no one likes this";
@@ -764,10 +763,8 @@ const oth = names.length - 2;
   } else if (names.length == 3) {
     return names[0] + ", " + names[1] + " and " + names[2] + " like this";
   } else if (names.length >= 4) {
-    return names[0] + ", " + names[1] + " and " + oth + " others like this";
+    return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
   }
 }
 
 console.log(likes(arr));
-
-// Преобразовать в формате switch(x)
