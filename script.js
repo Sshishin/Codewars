@@ -768,3 +768,8 @@ function likes(names) {
 }
 
 console.log(likes(arr));
+
+
+function sayHello(name) {
+  return 'Hello, ' + name;
+}
