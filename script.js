@@ -750,26 +750,53 @@
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 
-const arr = ["Alex", "Jacob", "Mark", "Max"]   ;
+// const arr = ["Alex", "Jacob", "Mark", "Max"]   ;
 
-function likes(names) {
+// function likes(names) {
 
-  if(names.length == 0) {
-    return "no one likes this";
-  } else if(names.length == 1) {
-    return names[0] + " likes this";
-  } else if(names.length == 2) {
-    return names[0] + " and " + names[1] + " like this";
-  } else if (names.length == 3) {
-    return names[0] + ", " + names[1] + " and " + names[2] + " like this";
-  } else if (names.length >= 4) {
-    return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
-  }
+//   if(names.length == 0) {
+//     return "no one likes this";
+//   } else if(names.length == 1) {
+//     return names[0] + " likes this";
+//   } else if(names.length == 2) {
+//     return names[0] + " and " + names[1] + " like this";
+//   } else if (names.length == 3) {
+//     return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+//   } else if (names.length >= 4) {
+//     return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
+//   }
+// }
+
+// console.log(likes(arr));
+
+
+// function sayHello(name) {
+//   return 'Hello, ' + name;
+// }
+
+
+
+// Find the unique number
+// Свое решение
+
+
+
+function findUniq(arr) {
+  const equalNumbers = arr.filter((el, index) => index !== arr.indexOf(el));  //Получаем не уникальные элементы
+  let iniqNumber = 0;
+
+  arr.forEach(elem => {
+    if(elem != equalNumbers[0]) {   //Если элемент не равен не уникальному значению, тогда возвращаем его
+      return iniqNumber += elem;
+    }
+    
+  });
+  return iniqNumber;
 }
 
-console.log(likes(arr));
 
+// Решение оптимальное
 
-function sayHello(name) {
-  return 'Hello, ' + name;
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));  //Если первое вхождение равно последнему вхождению, тогда возвращаем этот элемент
 }
